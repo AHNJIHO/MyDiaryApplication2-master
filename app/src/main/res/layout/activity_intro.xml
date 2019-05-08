@@ -22,7 +22,7 @@
             android:layout_gravity="center"
             android:textStyle="bold"
             android:textColor="#000"
-            android:text="하루한글"
+            android:text="하루 한글"
             android:textSize="50dp" />
 
     <TextView
