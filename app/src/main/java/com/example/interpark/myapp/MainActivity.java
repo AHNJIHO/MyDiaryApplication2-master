@@ -40,21 +40,21 @@ public class MainActivity extends BaseActivity implements TextView.OnEditorActio
         setContentView(R.layout.activity_main);
 
         /* 타이틀바 설정 title.setText만 변경해주면됨*/
-        View textView = (View) findViewById(R.id.icHeader);
-        TextView title = (TextView) textView.findViewById(R.id.tvHeader);
-        ImageButton ibMenu = (ImageButton) textView.findViewById(R.id.ibMenu);
-        ImageButton ibLogout = (ImageButton) textView.findViewById(R.id.ibLogout);
+        View textView = findViewById(R.id.icHeader);
+        TextView title = textView.findViewById(R.id.tvHeader);
+        ImageButton ibMenu = textView.findViewById(R.id.ibMenu);
+        ImageButton ibLogout = textView.findViewById(R.id.ibLogout);
         ibMenu.setVisibility(View.INVISIBLE);
         ibLogout.setVisibility(View.INVISIBLE);
         title.setText("로그인");
 
 
-        etId = (EditText) findViewById(R.id.etId);
-        etPw = (EditText) findViewById(R.id.etPw);
-        tvBtLogin = (TextView) findViewById(R.id.tvBtLogin);
-        tvBtChangePw = (TextView) findViewById(R.id.tvBtChangePw);
-        ckSaveId = (CheckBox) findViewById(R.id.ckSaveId);
-        tvBtJoin = (TextView) findViewById(R.id.tvBtJoin);
+        etId = findViewById(R.id.etId);
+        etPw = findViewById(R.id.etPw);
+        tvBtLogin = findViewById(R.id.tvBtLogin);
+        tvBtChangePw = findViewById(R.id.tvBtChangePw);
+        ckSaveId = findViewById(R.id.ckSaveId);
+        tvBtJoin = findViewById(R.id.tvBtJoin);
 
         PasswordTransformationMethod PTM = new PasswordTransformationMethod();
         etPw.setTransformationMethod(PTM);

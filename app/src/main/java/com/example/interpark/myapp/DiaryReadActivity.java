@@ -39,23 +39,23 @@ public class DiaryReadActivity extends BaseActivity implements View.OnClickListe
         setContentView(R.layout.activity_read);
 
         /* 타이틀바 설정 title.setText만 변경해주면됨*/
-        View textView = (View) findViewById(R.id.icHeader);
-        TextView title = (TextView) textView.findViewById(R.id.tvHeader);
-        ImageButton ibMenu = (ImageButton) textView.findViewById(R.id.ibMenu);
-        ImageButton ibLogout = (ImageButton) textView.findViewById(R.id.ibLogout);
+        View textView = findViewById(R.id.icHeader);
+        TextView title =  textView.findViewById(R.id.tvHeader);
+        ImageButton ibMenu = textView.findViewById(R.id.ibMenu);
+        ImageButton ibLogout = textView.findViewById(R.id.ibLogout);
         title.setText("일기읽기");
 
 
-        tvDate = (TextView) findViewById(R.id.tvDate);
-        ivPic = (ImageView) findViewById(R.id.ivPic);
-        tvNo = (TextView) findViewById(R.id.tvNo);
+        tvDate =  findViewById(R.id.tvDate);
+        ivPic =  findViewById(R.id.ivPic);
+        tvNo =  findViewById(R.id.tvNo);
 
-        btHome = (Button) findViewById(R.id.btHome);
-        tvRead = (TextView) findViewById(R.id.tvRead);
-        btPre = (Button) findViewById(R.id.btPre);
-        btNext = (Button) findViewById(R.id.btNext);
-        btModify = (Button) findViewById(R.id.btModify);
-        btDelete = (Button) findViewById(R.id.btDelete);
+        btHome = findViewById(R.id.btHome);
+        tvRead = findViewById(R.id.tvRead);
+        btPre = findViewById(R.id.btPre);
+        btNext = findViewById(R.id.btNext);
+        btModify = findViewById(R.id.btModify);
+        btDelete = findViewById(R.id.btDelete);
 
         Intent intent = getIntent();
         no = intent.getExtras().getString("no");

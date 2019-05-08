@@ -3,15 +3,7 @@ package com.example.interpark.myapp;
 
 
 public class DiaryVO {
-    /*dno     INTEGER PRIMARY KEY AUTOINCREMENT,
-    ddate   TEXT,
-    dtitle TEXT,
-    dimgpath TEXT,
-    dcontent text,
-    idpasswd TEXT,
-    phone TEXT,
-    id TEXT,
-    FOREIGN KEY(id) REFERENCES user(id)*/
+
     private String ddate;
     private String dtitle;
     private String dimgpath;

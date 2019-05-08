@@ -58,18 +58,18 @@ public class DiaryWriteActivity extends BaseActivity implements View.OnClickList
         setContentView(R.layout.activity_write);
 
         /* 타이틀바 설정 title.setText만 변경해주면됨*/
-        View textView = (View) findViewById(R.id.icHeader);
-        TextView title = (TextView) textView.findViewById(R.id.tvHeader);
-        ImageButton ibMenu = (ImageButton) textView.findViewById(R.id.ibMenu);
-        ImageButton ibLogout = (ImageButton) textView.findViewById(R.id.ibLogout);
+        View textView = findViewById(R.id.icHeader);
+        TextView title = textView.findViewById(R.id.tvHeader);
+        ImageButton ibMenu =  textView.findViewById(R.id.ibMenu);
+        ImageButton ibLogout = textView.findViewById(R.id.ibLogout);
         title.setText("일기쓰기");
 
-        tvDate = (TextView) findViewById(R.id.tvDate);
-        ivPic = (ImageView) findViewById(R.id.ivPic);
-        btSave = (Button) findViewById(R.id.btSave);
-        btCancel = (Button) findViewById(R.id.btCancel);
-        etWrite = (EditText) findViewById(R.id.etWrite);
-        tvNo = (TextView) findViewById(R.id.tvNo);
+        tvDate = findViewById(R.id.tvDate);
+        ivPic = findViewById(R.id.ivPic);
+        btSave = findViewById(R.id.btSave);
+        btCancel = findViewById(R.id.btCancel);
+        etWrite = findViewById(R.id.etWrite);
+        tvNo = findViewById(R.id.tvNo);
 
 
         if (MainpageActivity.UPDATEIS == "O") {
