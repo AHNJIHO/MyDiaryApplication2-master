@@ -206,7 +206,7 @@ public class DiaryWriteActivity extends BaseActivity implements View.OnClickList
         intent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT, mImageCaptureUri);
         startActivityForResult(intent, PICK_FROM_CAMERA);
     }
-
+    /* 앨범에서 이미지 가져오기 */
     public void doTakeAlbumAction() {
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setType(MediaStore.Images.Media.CONTENT_TYPE);
@@ -214,7 +214,7 @@ public class DiaryWriteActivity extends BaseActivity implements View.OnClickList
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (resultCode != RESULT_OK) {
@@ -247,19 +247,21 @@ public class DiaryWriteActivity extends BaseActivity implements View.OnClickList
                 }
                 final Bundle extras = data.getExtras();
 
-                // crop한 이미지 저장 경로
+                // crop된 이미지를 저장하기 위한 file 경로
                 String filePath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Diary/" + System.currentTimeMillis() + ".jpg";
 
                 if (extras != null) {
                     Bitmap photo = extras.getParcelable("data"); // crop된 bitmap
-                    ivPic.setImageBitmap(photo);
+                    ivPic.setImageBitmap(photo); //레이아웃의 이미지칸에 crop된 bitmap을 보여줌
 
-                    storeCropImage(photo, filePath);
+                    storeCropImage(photo, filePath); // crop된 이미지 를 외부저장소, 앨범에 저장한다.
                     absoultePath = filePath;
                     break;
                 }
+                //임시 파일 삭제
                 File f = new File(mImageCaptureUri.getPath());
-                if (f.exists()) {
+                if (f.exists())
+                {
                     f.delete();
                 }
             }
