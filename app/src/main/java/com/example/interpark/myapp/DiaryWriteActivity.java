@@ -254,7 +254,7 @@ public class DiaryWriteActivity extends BaseActivity implements View.OnClickList
                     Bitmap photo = extras.getParcelable("data"); // crop된 bitmap
                     ivPic.setImageBitmap(photo); //레이아웃의 이미지칸에 crop된 bitmap을 보여줌
 
-                    storeCropImage(photo, filePath); // crop된 이미지를 외부저장소, 앨범에 저장한다.
+                    storeCropImage(photo, filePath); // crop된 이미지 를 외부저장소, 앨범에 저장한다.
                     absoultePath = filePath;
                     break;
                 }
