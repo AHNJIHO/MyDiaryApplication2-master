@@ -52,7 +52,7 @@
                     android:layout_marginLeft="50dp"
                     android:layout_marginTop="5dp"
                     android:background="@android:color/transparent"
-                    android:hint="ID"
+                    android:hint="아이디 "
                     android:imeOptions="actionNext"
                     android:inputType="textUri"
                     android:maxLines="1"
@@ -65,7 +65,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="5dp"
                     android:maxLines="1"
-                    android:src="@drawable/human" />
+                    android:src="@drawable/id23" />
             </FrameLayout>
 
             <FrameLayout
@@ -88,7 +88,7 @@
                     android:layout_marginLeft="50dp"
                     android:layout_marginTop="5dp"
                     android:background="@android:color/transparent"
-                    android:hint="PASSWD"
+                    android:hint="비밀번호"
                     android:textColor="#000000"
                     android:inputType="textPassword"
                     android:textCursorDrawable="@drawable/color_cursor" />
@@ -99,7 +99,7 @@
                     android:layout_gravity="left"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="5dp"
-                    android:src="@drawable/lock2" />
+                    android:src="@drawable/pw12" />
             </FrameLayout>
         </LinearLayout>
 
